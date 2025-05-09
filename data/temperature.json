@@ -1,0 +1,22 @@
+{
+  "temperature": [
+    {
+      "id": 721,
+      "cityName": "Kolkata",
+      "temp": 32.97,
+      "feels_like": 37.75,
+      "temp_min": 32.97,
+      "temp_max": 32.97,
+      "pressure": 1002,
+      "humidity": 55,
+      "sea_level": 1002,
+      "grnd_level": 1002,
+      "main": "Haze",
+      "description": "haze",
+      "icon": "50d",
+      "speed": 5.14,
+      "deg": 170,
+      "listed": false
+    }
+  ]
+}
