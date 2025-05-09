@@ -1,0 +1,130 @@
+/* CityItem.module.css */
+/* Modern Weather Card Styling */
+
+.weatherCard {
+  background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 6px 6px rgba(0, 0, 0, 0.15);
+  color: white;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.weatherCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18), 0 12px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cityName {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-transform: capitalize;
+}
+
+.weatherSection {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionTitle::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.dataItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+}
+
+.dataLabel {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.dataValue {
+  font-weight: 600;
+}
+
+.temperature {
+  background-color: rgba(252, 176, 69, 0.2);
+}
+
+.details {
+  background-color: rgba(72, 198, 239, 0.2);
+}
+
+.wind {
+  background-color: rgba(131, 232, 175, 0.2);
+}
+
+/* Add a small circle decorator in the top-right */
+.weatherCard::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .weatherCard {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .cityName {
+    font-size: 2rem;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
